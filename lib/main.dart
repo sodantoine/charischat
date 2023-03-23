@@ -4,13 +4,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_demo/constants/app_constants.dart';
-import 'package:flutter_chat_demo/providers/auth_provider.dart';
+import 'package:flutter_chat_demo/pages/signup/signup_number.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'constants/color_constants.dart';
-import 'pages/pages.dart';
+import 'pages/signup/informations.dart';
+import 'pages/signup/verification_code.dart';
+import 'pages/splash_page.dart';
 import 'providers/providers.dart';
 
 void main() async {
@@ -65,7 +66,8 @@ class MyApp extends StatelessWidget {
           primaryColor: ColorConstants.themeColor,
           primarySwatch: MaterialColor(0xfff5a623, ColorConstants.swatchColor),
         ),
-        home: SplashPage(),
+        //home: SplashPage(),
+        home: VerificationCode(number: "13231",otpCode: "45646",verificationId: "123",token: 2,),
         debugShowCheckedModeBanner: false,
       ),
     );
